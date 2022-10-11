@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "Gear.h"
+#include "Wheel.h"
 
 int main() {
     //1
@@ -14,9 +15,14 @@ int main() {
 //    std::cout << "Big gear: " << bigTire.gearInches() << "\nLittle gear: " << littleTire.gearInches() << '\n';
 
     Wheel wheel{26, 1.5};
-    std::cout << wheel.circumfrence() << '\n';
-    Gear gear{52, 11, wheel};
+    Donut donut{2};
+
+    std::cout << wheel.circumference() << '\n';
+    Gear gear{52, 11, &wheel};
+    Gear gearD{52, 11, &donut};
+
     std::cout << gear.gearInches() << '\n' << gear.ratio() << '\n';
+    std::cout << gearD.gearInches() << '\n'; //Gear's gearInches method now works with any type that has a diameter method
 
     return 0;
 }
