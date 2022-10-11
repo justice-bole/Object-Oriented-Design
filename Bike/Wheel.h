@@ -20,7 +20,7 @@ public:
     m_rimDiameter{rimD}, m_tireDiameter{tireD} { }
 
     [[nodiscard]] float diameter() const override {
-        return rimDiameter() + (tireDiameter() * 2); // 2. using a Wheel struct instead of class
+        return rimDiameter() + (tireDiameter() * 2);
     }
 
     [[nodiscard]] float circumference() const {

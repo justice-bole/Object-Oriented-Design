@@ -5,7 +5,7 @@
 #ifndef BIKE_ICIRCLE_H
 #define BIKE_ICIRCLE_H
 
-class ICircle //base class interface
+class ICircle
 {
 public:
     [[nodiscard]] virtual float diameter() const = 0;
